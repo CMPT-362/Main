@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Account Preferences">
+        <Preference
+            android:iconSpaceReserved="false"
+            android:key="profile_key"
+            android:title="User Profile"
+            android:summary="Name, email, class, etc">
+            <intent android:targetPackage="com.zw.myruns"
+                    android:targetClass="com.zw.myruns.ProfileActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Additional Settings">
+
+        <CheckBoxPreference
+            android:iconSpaceReserved="false"
+            android:key="privacy_key"
+            android:title="Send Notifications"
+            android:summary="Send Notifications when you havent reached calorie goal"/>
+
+        <ListPreference
+            android:iconSpaceReserved="false"
+            android:key="units_key"
+            android:title="Units Preference"
+            android:summary="Units of measurement you want to use"
+            android:defaultValue="Miles"
+            android:entries="@array/unitsEntries"
+            android:entryValues="@array/unitsValues"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
