@@ -49,4 +49,5 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         tabLayoutMediator.detach()
     }
+
 }

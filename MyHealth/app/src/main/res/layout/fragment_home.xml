@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,20 +9,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Today's Data"
             android:textSize="24dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:paddingTop="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:src = "@drawable/ic_baseline_people_alt_24"
+                android:clickable="true"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:src = "@drawable/ic_baseline_history_24"
+                android:clickable="true"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:src = "@drawable/ic_baseline_settings_24"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
@@ -29,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text = "Calories Lost"
+                android:text = "Calories Intake"
                 android:textSize="18dp"/>
 
             <TextView
@@ -40,13 +72,13 @@
                 android:text="123123"
                 android:textSize="18dp"/>
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
@@ -54,7 +86,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text = "Calories Lost"
+                android:text = "Calorie Lost"
                 android:textSize="18dp"/>
 
             <TextView
@@ -65,13 +97,13 @@
                 android:text="123123"
                 android:textSize="18dp"/>
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
@@ -79,7 +111,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text = "Calories Lost"
+                android:text = "Calorie Gain"
                 android:textSize="18dp"/>
 
             <TextView
@@ -87,16 +119,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
-                android:text="123123"
+                android:text="0"
                 android:textSize="18dp"/>
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
@@ -104,7 +136,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text = "Calories Lost"
+                android:text = "Glasses of Water"
                 android:textSize="18dp"/>
 
             <TextView
@@ -112,16 +144,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
-                android:text="123123"
+                android:text="4"
                 android:textSize="18dp"/>
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
@@ -129,7 +161,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text = "Calories Lost"
+                android:text = "Stress"
                 android:textSize="18dp"/>
 
             <TextView
@@ -137,12 +169,10 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
-                android:text="123123"
+                android:text="Low"
                 android:textSize="18dp"/>
 
-
         </LinearLayout>
-
 
     </LinearLayout>
 

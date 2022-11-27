@@ -6,105 +6,17 @@
     tools:context=".fragments.SettingsFragment">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".SettingsFragment"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Account Settings"
-            android:textSize="13dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/detailsIntent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User Profile"
+            android:text = "Account Settings"
             android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="25dp"
-            android:textColorHint="@color/black" />
-
-        <TextView
-            android:id="@+id/userProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name, Weight, Calorie Goal etc"
-            android:textSize="13dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="0.5dp"
-            android:textColorHint="@color/black" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Send Notification"
-            android:textSize="20dp"
-            android:button="@null"
-            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text = "Additional Settings"
-            android:layout_marginTop="25dp"
-            android:textSize="13dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/UnitPreference"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Unit of Preference"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="25dp"
-            android:textColorHint="@color/black"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text = "Extra"
-            android:textSize="13dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="0.5dp"
-            android:textColorHint="@color/black"
-            />
-
-        <TextView
-            android:id="@+id/Webpage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Webpage"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="25dp"
-            android:textColorHint="@color/black"
-            />
-
-        <TextView
-            android:id="@+id/externalLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text = "Web Link"
-            android:textSize="13dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="0.5dp"
-            android:textColorHint="@color/black"
-            />
-
-
-
+            android:textColor="@color/black"/>
+        
     </LinearLayout>
 
 </FrameLayout>
