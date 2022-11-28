@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var myMyFragmentStateAdapter: MyFragmentStateAdapter
     private lateinit var fragments: ArrayList<Fragment>
-    private val tabTitles = arrayOf("Home", "Calorie", "Stress", "H2O", "Config") //Tab titles
+    private val tabTitles = arrayOf("Home", "Calorie", "Stress", "H2O") //Tab titles
 
     private lateinit var tabConfigurationStrategy: TabLayoutMediator.TabConfigurationStrategy
     private lateinit var tabLayoutMediator: TabLayoutMediator
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         fragments.add(ExerciseFragment())
         fragments.add(StressFragment())
         fragments.add(WaterFragment())
-        fragments.add(SettingsFragment())
 
         myMyFragmentStateAdapter = MyFragmentStateAdapter(this, fragments)
         viewPager2.adapter = myMyFragmentStateAdapter

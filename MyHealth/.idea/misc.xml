@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.161231884057971" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2536468505859375" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.14463019250253292" />
         <entry key="app/src/main/res/layout/fragment_stress.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_water.xml" value="0.2554517133956386" />
+        <entry key="app/src/main/res/layout/fragment_water.xml" value="0.1" />
       </map>
     </option>
   </component>

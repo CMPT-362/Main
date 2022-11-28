@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">MyHealth</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_preference_key">com.xyz.PROFILE_PREFERENCE_KEY</string>
 </resources>
