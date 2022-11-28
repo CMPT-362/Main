@@ -11,6 +11,12 @@ import android.widget.Toast
 import com.google.android.material.slider.Slider
 import com.xyz.myhealth.R
 
+/**
+ * This fragment is for seeing stress values of users
+ * Save - Saves stress values of users
+ * BarChartIcon - Opens activity for seeing graphs and history of previous stress values
+ * Reset - Sets all slider values to zero
+ */
 class StressFragment : Fragment() {
     private lateinit var saveButton : Button
     private lateinit var stressHistory : ImageView
@@ -43,14 +49,65 @@ class StressFragment : Fragment() {
         onStressHistoryClicked(view)
         onStressResetClicked(view)
 
-
-        //getSliderValue(slider2)
-        //getSliderValue(slider3)
-
         return view;
     }
 
+    // when save button is clicked
     private fun onStressSaveClicked(view: View){
+        saveButton = view.findViewById(R.id.stressSave)
+        saveButton.setOnClickListener(View.OnClickListener {
+            val stressValue : Int = getAllSliderValue(view)
+            setAllSliderToDefault(view)
+            // store stressValue now
+            println("debug: StressValue is $stressValue")
+            Toast.makeText(this.context, "You clicked on SaveButton", Toast.LENGTH_SHORT).show()
+        })
+    }
+
+    // when bar chart icon is clicked
+    private fun onStressHistoryClicked(view: View){
+        stressHistory = view.findViewById(R.id.stressHistory)
+        stressHistory.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this.context, "You clicked on StressHistory", Toast.LENGTH_SHORT).show()
+        })
+    }
+
+    // when reset button is clicked
+    private fun onStressResetClicked(view: View){
+        resetButton = view.findViewById(R.id.stressReset)
+        resetButton.setOnClickListener(View.OnClickListener {
+            setAllSliderToDefault(view)
+            Toast.makeText(this.context, "You clicked on ResetButton", Toast.LENGTH_SHORT).show()
+        })
+    }
+
+    // set all sliders to zero
+    private fun setAllSliderToDefault(view: View){
+        slider1 = view.findViewById(R.id.discreteSlider_1)
+        slider2 = view.findViewById(R.id.discreteSlider_2)
+        slider3 = view.findViewById(R.id.discreteSlider_3)
+        slider4 = view.findViewById(R.id.discreteSlider_4)
+        slider5 = view.findViewById(R.id.discreteSlider_5)
+        slider6 = view.findViewById(R.id.discreteSlider_6)
+        slider7 = view.findViewById(R.id.discreteSlider_7)
+        slider8 = view.findViewById(R.id.discreteSlider_8)
+        slider9 = view.findViewById(R.id.discreteSlider_9)
+        slider10 = view.findViewById(R.id.discreteSlider_10)
+
+        slider1.value = 0F;
+        slider2.value = 0F;
+        slider3.value = 0F;
+        slider4.value = 0F;
+        slider5.value = 0F;
+        slider6.value = 0F;
+        slider7.value = 0F;
+        slider8.value = 0F;
+        slider9.value = 0F;
+        slider10.value = 0F;
+    }
+
+    // calculate sum of all slider values
+    private fun getAllSliderValue(view:View):Int{
         // all sliders
         slider1 = view.findViewById(R.id.discreteSlider_1)
         slider2 = view.findViewById(R.id.discreteSlider_2)
@@ -63,40 +120,15 @@ class StressFragment : Fragment() {
         slider9 = view.findViewById(R.id.discreteSlider_9)
         slider10 = view.findViewById(R.id.discreteSlider_10)
 
-        saveButton = view.findViewById(R.id.stressSave)
-        saveButton.setOnClickListener(View.OnClickListener {
-            getSliderValue(slider1)
-            getSliderValue(slider2)
-            getSliderValue(slider3)
-            getSliderValue(slider4)
-            getSliderValue(slider5)
-            getSliderValue(slider6)
-            getSliderValue(slider7)
-            getSliderValue(slider8)
-            getSliderValue(slider9)
-            getSliderValue(slider10)
+        val firstHalf : Int = getSliderValue(slider1) + getSliderValue(slider2) + getSliderValue(slider3) + getSliderValue(slider4) + getSliderValue(slider5)
+        val secondHalf : Int = getSliderValue(slider6) + getSliderValue(slider7) + getSliderValue(slider8) + getSliderValue(slider9) + getSliderValue(slider10)
 
-            Toast.makeText(this.context, "You clicked on SaveButton", Toast.LENGTH_SHORT).show()
-        })
+        return firstHalf + secondHalf;
     }
 
-    private fun onStressHistoryClicked(view: View){
-        stressHistory = view.findViewById(R.id.stressHistory)
-        stressHistory.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this.context, "You clicked on StressHistory", Toast.LENGTH_SHORT).show()
-        })
-    }
-
-    private fun onStressResetClicked(view: View){
-        resetButton = view.findViewById(R.id.stressReset)
-        resetButton.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this.context, "You clicked on ResetButton", Toast.LENGTH_SHORT).show()
-        })
-    }
-
-    private fun getSliderValue(slider: Slider){
-        val text : String = slider.value.toInt().toString()
-        println("debug: $slider value is $text")
+    // get individual value of slider
+    private fun getSliderValue(slider: Slider): Int {
+        return slider.value.toInt()
     }
 
 }

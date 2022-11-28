@@ -11,6 +11,12 @@ import android.widget.Toast
 import com.xyz.myhealth.R
 import com.xyz.myhealth.activities.UserProfileActivity
 
+/**
+ * This fragment contains information of the Users today's data
+ * UserIcon - Starts UserProfileActivity
+ * HistoryIcon - Starts HomeHistoryActivity
+ * InformationIcon - Starts InformationActivity
+ */
 class HomeFragment : Fragment() {
     private lateinit var userProfileButton : ImageView
     private lateinit var allHistoryButton : ImageView

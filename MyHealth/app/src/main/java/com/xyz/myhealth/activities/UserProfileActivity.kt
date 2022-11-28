@@ -9,6 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.xyz.myhealth.R
 
+/**
+ * This activity is for creating or editing
+ * information about User Profile
+ */
 class UserProfileActivity : AppCompatActivity() {
 
     private lateinit var nameView: TextView
